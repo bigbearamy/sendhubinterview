@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^',  include('webservices.urls')),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':settings.STATIC_ROOT}),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':settings.STATIC_ROOT}),
 
     # url(r'^$', 'sendhubinterview.views.home', name='home'),
     # url(r'^sendhubinterview/', include('sendhubinterview.foo.urls')),
