@@ -49,14 +49,15 @@ schema = {
 
 @require_http_methods(["GET", "POST"])
 def index(request):
-    json_dict = {}
-    return HttpResponse(json_dict, mimetype='application/json')
+    return render_to_response('home.html', {})
+
 
 @csrf_exempt
 @require_http_methods(["GET", "POST"])
 def submitjob_user(request):
     errormsg = ''
     json = ''
+    json_dict = None
     try:
         if request.method == "POST":
             print (str(request.body))
